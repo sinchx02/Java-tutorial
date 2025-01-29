@@ -20,12 +20,14 @@ public class Student
 
         Student stud = new Student();
         int total = stud.totalMarks(s);
-        int ag = stud.average(s, total);
+        double ag = stud.average(s, total);
         int hm = stud.highestMark(s);
+        int sm = stud.secondHighest(s);
 
         System.out.println("total marks is "+total);
-        System.out.println("average is "+ag);
+       System.out.println("average is "+ag);
         System.out.println("Highest marks is "+hm);
+        System.out.println("Second highest marks is" +sm);
 
     }
     public int totalMarks(int s[])
@@ -37,20 +39,37 @@ public class Student
             return sum;
     }
 
-    public int average(int s[],int n)
+    public double average(int s[],int n)
     {
-        int avg = n/(s.length);
-        return avg;
+        double avg =n/(s.length);
+        return avg; 
     }
 
     public int highestMark(int s[])
     {
         int max=s[0];
-        for(int i=1;i<s.length-1;i++)
+        for(int i=1;i<s.length;i++)
         {
             if(s[i]>max)
             max=s[i];
         }
         return max;
+    }
+
+    public int secondHighest(int s[])
+    {
+        int max=s[0];
+        for(int i=1;i<s.length;i++)
+        {
+            if(s[i]>max)
+            max=s[i];
+        }
+        int secondmax = s[0];
+        for(int i=0;i<s.length;i++)
+        {
+            if(s[i]>secondmax && s[i]!=max)
+            secondmax=s[i];
+        }
+        return secondmax;
     }
 }
