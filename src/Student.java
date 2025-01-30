@@ -27,7 +27,7 @@ public class Student
         System.out.println("total marks is "+total);
        System.out.println("average is "+ag);
         System.out.println("Highest marks is "+hm);
-        System.out.println("Second highest marks is" +sm);
+        System.out.println("Second highest marks is "+sm);
 
     }
     public int totalMarks(int s[])
