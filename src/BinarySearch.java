@@ -1,3 +1,4 @@
+//iterative binary search
 import java.util.Scanner;
 
 public class BinarySearch {
@@ -8,7 +9,7 @@ public class BinarySearch {
         int n = sc.nextInt();
         int s[] = new int[n];
         System.out.println("Enter sorted array");
-        for(int i:s)
+        for(int i=0; i<n;i++)
         {
             s[i]=sc.nextInt();
         }
@@ -19,13 +20,13 @@ public class BinarySearch {
         if(r==0)
         System.out.println("key "+key+" not found");
         else
-        System.out.println("key"+key+ "found");
+        System.out.println("key "+key+ " found at index "+r);
         
     }
     public int search(int s[],int key)
     {
-        int low=s[0];
-        int high = s[s.length-1];
+        int low=0;
+        int high =s.length-1;
         while(low<=high)
         {
             int mid = (low+high)/2;
@@ -36,7 +37,7 @@ public class BinarySearch {
             else
             low =mid+1;
         }
-        return 0;
+        return -1;
     }
 
     
