@@ -7,7 +7,7 @@ public int getBonus() {
 }
 
 public void setBonus(int bonus) {
-    bonus = bonus;
+    this.bonus = bonus;
 } 
  
  public void isBonusGranted()
