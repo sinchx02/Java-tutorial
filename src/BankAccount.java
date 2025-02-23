@@ -12,11 +12,13 @@ public class BankAccount {
     }
     public BankAccount(int acctnum)
     {
+        this(656576, 775);
         this.acctnum=acctnum;
         System.out.println("Account created with account number " +acctnum);
     }
     public BankAccount(int acctnum, int initbal)
     {
+        this(786876, 778, "Sweety");
         this.acctnum=acctnum;
         this.initbal=initbal;
         System.out.println("Account created with account number " +acctnum+" and initial balance :"+initbal);
@@ -28,11 +30,12 @@ public class BankAccount {
         this.name=name;
         System.out.println("Account created with account number " +acctnum+", initial balance : "+initbal+" and Name:"+name);
     }
-
     public static void main(String[] args) {
-        BankAccount b0 = new BankAccount();
+        //Check b0 = new Check();
         BankAccount b=new BankAccount(35436565);
-        BankAccount b1=new BankAccount(35436565,800);
-        BankAccount b2=new BankAccount(35436565,800,"Arthi");
+        // Check b1=new Check(35436565,800);
+        // Check b2=new Check(35436565,800,"Arthi");
     }
+    
 }
+

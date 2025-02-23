@@ -18,7 +18,7 @@ public class Teamlead extends Manager
         }
         else
         {
-            System.out.println("Team does not exists");
+            System.out.println("Team does not exist");
         }
     }
     
